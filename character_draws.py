@@ -1,4 +1,5 @@
 from pathlib import Path
+import math
 
 from pico2d import *
 
@@ -11,7 +12,10 @@ def draw_boy(x, y):
 
 
 def move_circle():
-    draw_boy(400, 300)
+    theta = math.radians(0)
+    x = 400 + 200 * math.cos(theta)
+    y = 300 + 200 * math.sin(theta)
+    draw_boy(x, y)
 
 
 def move_rectangle():
