@@ -1,5 +1,6 @@
 from pathlib import Path
 import math
+import argparse
 
 from pico2d import *
 
@@ -97,4 +98,8 @@ def main(cycles=None):
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description='Circle, rectangle, triangle motion')
+    parser.add_argument('--cycles', type=int, default=None,
+                        help='Run a fixed number of cycles instead of looping forever')
+    args = parser.parse_args()
+    main(cycles=args.cycles)
