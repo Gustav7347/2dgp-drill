@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from pico2d import *
 
 
@@ -14,7 +16,9 @@ def move_triangle():
 
 
 def main(cycles=1):
+    global boy
     open_canvas(800, 600)
+    boy = load_image(str(Path(__file__).with_name('character.png')))
     for _ in range(cycles):
         move_circle()
         move_rectangle()
