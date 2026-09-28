@@ -4,6 +4,11 @@ import math
 from pico2d import *
 
 
+TRIANGLE_A = (100, 100)
+TRIANGLE_B = (700, 100)
+TRIANGLE_C = (400, 500)
+
+
 def draw_boy(x, y):
     clear_canvas()
     boy.draw(x, y)
@@ -55,15 +60,15 @@ def move_line(start, end):
 
 
 def move_triangle_bottom():
-    move_line((100, 100), (700, 100))
+    move_line(TRIANGLE_A, TRIANGLE_B)
 
 
 def move_triangle_right():
-    move_line((700, 100), (400, 500))
+    move_line(TRIANGLE_B, TRIANGLE_C)
 
 
 def move_triangle_left():
-    move_line((400, 500), (100, 100))
+    move_line(TRIANGLE_C, TRIANGLE_A)
 
 
 def move_triangle():
