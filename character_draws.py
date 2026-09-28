@@ -52,8 +52,9 @@ def move_rectangle():
 
 
 def move_line(start, end):
-    for step in range(101):
-        t = step / 100
+    steps = max(1, math.ceil(math.dist(start, end) / 5))
+    for step in range(steps + 1):
+        t = step / steps
         x = start[0] + (end[0] - start[0]) * t
         y = start[1] + (end[1] - start[1]) * t
         draw_boy(x, y)
