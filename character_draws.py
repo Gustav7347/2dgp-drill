@@ -106,4 +106,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     if args.cycles is not None and args.cycles < 1:
         parser.error('--cycles must be at least 1')
-    main(cycles=args.cycles)
+    try:
+        main(cycles=args.cycles)
+    except KeyboardInterrupt:
+        pass
