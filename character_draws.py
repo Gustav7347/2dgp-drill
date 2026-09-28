@@ -84,6 +84,8 @@ def move_triangle():
 
 def main(cycles=None):
     global boy
+    if cycles is not None and cycles < 1:
+        raise ValueError('cycles must be at least 1')
     open_canvas(800, 600)
     try:
         boy = load_image(str(Path(__file__).with_name('character.png')))
@@ -102,4 +104,6 @@ if __name__ == '__main__':
     parser.add_argument('--cycles', type=int, default=None,
                         help='Run a fixed number of cycles instead of looping forever')
     args = parser.parse_args()
+    if args.cycles is not None and args.cycles < 1:
+        parser.error('--cycles must be at least 1')
     main(cycles=args.cycles)
