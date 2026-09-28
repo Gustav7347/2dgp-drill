@@ -81,15 +81,17 @@ def move_triangle():
     move_triangle_left()
 
 
-def main(cycles=1):
+def main(cycles=None):
     global boy
     open_canvas(800, 600)
     try:
         boy = load_image(str(Path(__file__).with_name('character.png')))
-        for _ in range(cycles):
+        completed = 0
+        while cycles is None or completed < cycles:
             move_circle()
             move_rectangle()
             move_triangle()
+            completed += 1
     finally:
         close_canvas()
 
