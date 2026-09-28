@@ -9,13 +9,14 @@ TRIANGLE_B = (700, 100)
 TRIANGLE_C = (400, 500)
 CIRCLE_CENTER = (400, 300)
 CIRCLE_RADIUS = 200
+FRAME_DELAY = 0.01
 
 
 def draw_boy(x, y):
     clear_canvas()
     boy.draw(x, y)
     update_canvas()
-    delay(0.01)
+    delay(FRAME_DELAY)
 
 
 def move_circle():
