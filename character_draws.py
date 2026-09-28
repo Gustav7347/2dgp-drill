@@ -11,9 +11,10 @@ def move_triangle():
 
 
 def main(cycles=1):
-    move_circle()
-    move_rectangle()
-    move_triangle()
+    for _ in range(cycles):
+        move_circle()
+        move_rectangle()
+        move_triangle()
 
 
 if __name__ == '__main__':
