@@ -59,7 +59,9 @@ def move_triangle_right():
 
 
 def move_triangle_left():
-    print('triangle left')
+    for step in range(101):
+        t = step / 100
+        draw_boy(400 - 300 * t, 500 - 400 * t)
 
 
 def move_triangle():
