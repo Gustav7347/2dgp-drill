@@ -7,6 +7,7 @@ def move_circle():
     clear_canvas()
     boy.draw(400, 300)
     update_canvas()
+    delay(0.01)
 
 
 def move_rectangle():
