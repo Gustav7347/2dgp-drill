@@ -4,7 +4,8 @@ from pico2d import *
 
 
 def move_circle():
-    print('circle')
+    boy.draw(400, 300)
+    update_canvas()
 
 
 def move_rectangle():
