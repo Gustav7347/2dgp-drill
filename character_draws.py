@@ -7,6 +7,8 @@ from pico2d import *
 TRIANGLE_A = (100, 100)
 TRIANGLE_B = (700, 100)
 TRIANGLE_C = (400, 500)
+CIRCLE_CENTER = (400, 300)
+CIRCLE_RADIUS = 200
 
 
 def draw_boy(x, y):
@@ -19,8 +21,8 @@ def draw_boy(x, y):
 def move_circle():
     for degree in range(361):
         theta = math.radians(degree)
-        x = 400 + 200 * math.cos(theta)
-        y = 300 + 200 * math.sin(theta)
+        x = CIRCLE_CENTER[0] + CIRCLE_RADIUS * math.cos(theta)
+        y = CIRCLE_CENTER[1] + CIRCLE_RADIUS * math.sin(theta)
         draw_boy(x, y)
 
 
