@@ -46,8 +46,22 @@ def move_rectangle():
     move_left()
 
 
+def move_triangle_bottom():
+    print('triangle bottom')
+
+
+def move_triangle_right():
+    print('triangle right')
+
+
+def move_triangle_left():
+    print('triangle left')
+
+
 def move_triangle():
-    print('triangle')
+    move_triangle_bottom()
+    move_triangle_right()
+    move_triangle_left()
 
 
 def main(cycles=1):
