@@ -46,22 +46,24 @@ def move_rectangle():
     move_left()
 
 
-def move_triangle_bottom():
+def move_line(start, end):
     for step in range(101):
         t = step / 100
-        draw_boy(100 + 600 * t, 100)
+        x = start[0] + (end[0] - start[0]) * t
+        y = start[1] + (end[1] - start[1]) * t
+        draw_boy(x, y)
+
+
+def move_triangle_bottom():
+    move_line((100, 100), (700, 100))
 
 
 def move_triangle_right():
-    for step in range(101):
-        t = step / 100
-        draw_boy(700 - 300 * t, 100 + 400 * t)
+    move_line((700, 100), (400, 500))
 
 
 def move_triangle_left():
-    for step in range(101):
-        t = step / 100
-        draw_boy(400 - 300 * t, 500 - 400 * t)
+    move_line((400, 500), (100, 100))
 
 
 def move_triangle():
