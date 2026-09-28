@@ -84,12 +84,14 @@ def move_triangle():
 def main(cycles=1):
     global boy
     open_canvas(800, 600)
-    boy = load_image(str(Path(__file__).with_name('character.png')))
-    for _ in range(cycles):
-        move_circle()
-        move_rectangle()
-        move_triangle()
-    close_canvas()
+    try:
+        boy = load_image(str(Path(__file__).with_name('character.png')))
+        for _ in range(cycles):
+            move_circle()
+            move_rectangle()
+            move_triangle()
+    finally:
+        close_canvas()
 
 
 if __name__ == '__main__':
