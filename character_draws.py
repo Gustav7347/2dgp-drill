@@ -3,11 +3,15 @@ from pathlib import Path
 from pico2d import *
 
 
-def move_circle():
+def draw_boy(x, y):
     clear_canvas()
-    boy.draw(400, 300)
+    boy.draw(x, y)
     update_canvas()
     delay(0.01)
+
+
+def move_circle():
+    draw_boy(400, 300)
 
 
 def move_rectangle():
